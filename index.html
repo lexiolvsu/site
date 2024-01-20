@@ -11,24 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body><center><h3><a href="mailto:mail@lexio.buzz"><i>mail@</a>lexio.buzz</i></h3>
-  <audio src="https://www.radioking.com/play/lexio-fm" autoplay controls></audio><br><i>♪ <span id="awesome"></span></i>
-<script>
-var storedText;
-
-fetch('https://api.radioking.io/widget/radio/lexio-fm/track/current')
-  .then(function(response) {
-    response.text().then(function(text) {
-      storedText = text;
-      setInterval(done(), 5000)
-    });
-  });
-  
-function done() {
-	const obj = JSON.parse(storedText);
-	document.getElementById("awesome").innerHTML =
-	obj.artist + " - " + obj.title;
-}
-</script><br><br>
+  <audio src="https://www.radioking.com/play/lexio-fm" autoplay controls></audio><br><br>
    <i><a href="https://bummr.social">bummr.social (i run this)</a></i><br>
     <i><a href="https://knee.lexio.buzz">my discord bot</a></i><br><br>
     <details><summary><i>socials</i></summary>
