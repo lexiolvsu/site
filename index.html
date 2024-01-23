@@ -1,33 +1,211 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>lexio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="lexio !!" />
+
+<title>lexio :3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="lexio !!" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://lexio.buzz" />
 <meta property="og:description" content="my silly website :3333" />
 <meta name="theme-color" content="#FF0000">
-  <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://lexio.buzz/style.css">
 </head>
-<body><center><h3><a href="mailto:mail@lexio.buzz"><i>mail@</a>lexio.buzz</i></h3>
-  <iframe src="https://player.twitch.tv/?channel=lexiostuff&parent=lexio.buzz" frameborder="0" allowfullscreen="true" scrolling="no" height="189" width="310"></iframe><br><br>
-   <i><a href="https://bummr.social">bummr.social (i run this)</a></i><br>
-    <i><a href="https://knee.lexio.buzz">my discord bot</a></i><br><br>
-    <details><summary><i>socials</i></summary>
-    <i><a href="https://twitter.com/l_e_x_i_o">@l_e_x_i_o (twitter)</a></i><br>
-  <i><a href="https://bsky.app/profile/factfiction.online">factfiction.online (bluesky)</a></i><br>
-  <i><a href="https://femboys.love/@lexio">@lexio@femboys.love (fedi)</a></i><br>
-  <i><a href="https://bummr.social/lexio">@lexio@bummr.social (fedi (my instance))</a></i><br>
-  <i><a href="https://wetdry.world/@lexio">@lexio@wetdry.world (mastodon)</a></i><br>
-  <i><a href="https://ffm.bio/6016">all 6016 socials</a></i><br>
-  </details><br>
-    <a href="https://lexio.neocities.org"><i>old site</i></a><br>
-  <br><br>
-<!-- FC2 Counter  Starts here -->
-<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39402623&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=39402623&main=1" /></noscript>
-<!-- FC2 Counter  Ends here -->
-</center>
+<body>
+<div id="warning" class="center">
+<table>
+<tr>
+<td>
+<img src="https://cdn.lexio.buzz/doom.png" width="150">
+</td>
+<td>
+<h2>DOOM</h2>
+<div id="well">
+<button onclick="logIn()">LOG IN</button><br><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" onclick="fullscreen()"><label for="vehicle1"> FULLSCREEN MODE</label><br><br><img src="https://cdn.lexio.buzz/js-warning.gif" class="badge"></p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="desktop" style="display: none;">
+<div id="window">
+  <div id="titlebar">MUSIC</div>
+  <div style="padding: 5px;">
+  <form>
+  <input type="radio" id="html" name="fav_language" value="HTML" onclick="document.getElementById('music').src = 'https://cdn.lexio.buzz/YESCLIP - SOLARSELECTOR (1).mp3'; document.getElementById('radiotrack').style.display = 'none'; document.getElementById('pmtrack').style.display = 'block';">
+  <label for="html">not live</label>
+  <input type="radio" id="css" name="fav_language" value="CSS" onclick="document.getElementById('music').src = 'https://www.radioking.com/play/lexio-fm'; document.getElementById('pmtrack').style.display = 'none'; document.getElementById('radiotrack').style.display = 'block';">
+  <label for="css">lexio.fm</label><br>
+</form><br>
+<audio controls autoplay id="music"></audio>
+<br>
+<i id="pmtrack" style="display: none;">♪ <span id="track">YESCLIP - SOLARSELECTOR</span></i>
+<i id="radiotrack" style="display: none;">♪ <span id="awesome"></span></i>
+</div>
+</div>
+<div id="windowtwo">
+  <div id="titlebartwo">INTRANET EXPLODER</div>
+  <div style="padding: 5px;">
+    <input type="text" disabled value="sss.lexio"></input>
+  </div>
+  <iframe src="https://lexio.buzz/pages/index" width="500vw" height="200vh"></iframe>
+</div>
 
+<script>
+function changePage(url) {
+  document.getElementById("iframePage").src = url;
+}
+</script>
+
+<div id="taskbar">
+<button>START</button>
+</div>
+</div>
+
+<script>
+var storedText;
+setInterval(fetchlol, 1000);
+function fetchlol() {
+	fetch('https://api.radioking.io/widget/radio/lexio-fm/track/current')
+	  .then(function(response) {
+	    response.text().then(function(text) {
+	      storedText = text;
+	      done()
+	    });
+	  });
+}
+  
+function done() {
+	const obj = JSON.parse(storedText);
+	document.getElementById("awesome").innerHTML =
+	obj.artist + " - " + obj.title;
+}
+</script>
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("window"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "titlebar")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "titlebar").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("windowtwo"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "titlebartwo")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "titlebartwo").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+<script>
+var elem = document.documentElement;
+function fullscreen() {
+	if (!window.screenTop && !window.screenY) {
+	    closeFullscreen();
+	} else {openFullscreen();}
+}
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+function logIn() {
+  const ent = document.getElementById("warning");
+  ent.style.display = "none";
+  document.getElementById("desktop").style.display = "block";
+}
+
+</script>
 </body>
 </html>
