@@ -24,7 +24,7 @@
 <td>
 <h2>DOOM</h2>
 <div id="well">
-<button onclick="logIn()">LOG IN</button><br><br><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" onclick="fullscreen()"><label for="vehicle1"> FULLSCREEN MODE</label><br><br><img src="https://cdn.lexio.buzz/js-warning.gif" class="badge"></p></div>
+<button onclick="logIn()">LOG IN</button><br><br><span></span><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" onclick="fullscreen()"><label for="vehicle1"> FULLSCREEN MODE</label><br><br><img src="https://cdn.lexio.buzz/js-warning.gif" class="badge"><img src="https://cdn.lexio.buzz/autoplayingmusic.png" class="badge"></p></div>
 <div id="deep" style="display: none;">
 <p>LOADING...</p></div>
 </td>
@@ -239,7 +239,8 @@ function logIn() {
   ele.style.display = "none";
   m.style.display = "block";
   setTimeout(() => { ent.style.display = "none"; }, 800);
-  setTimeout(() => { document.getElementById("desktop").style.display = "block"; }, 1000);
+  setTimeout(() => { document.getElementById("desktop").style.display = "block"; var audio = new Audio('https://cdn.lexio.buzz/startup.wav');
+audio.play();}, 1000);
   setTimeout(() => { document.getElementById("stuff").style.display = "block"; }, 1200);
   var element = document.getElementById("window");
   element.classList.add("open");
