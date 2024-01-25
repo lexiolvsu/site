@@ -3,11 +3,17 @@
 <head>
 <title>Page Title</title>
 <style>
+body::-webkit-scrollbar {
+  display: none;
+}
 body {
 	margin: 0;
 	background: black;
     text-align: center;
     font-size: 10px;
+	-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+	
 }
 .humid {
 	background: red;
