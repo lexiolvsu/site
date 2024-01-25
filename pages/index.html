@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>lexio</title>
-   <link rel="stylesheet" href="index.css">
+<title>Page Title</title>
+<style>
+body {
+	margin: 0;
+	background: black;
+    text-align: center;
+    font-size: 10px;
+}
+.humid {
+	background: red;
+    color: black;
+    border: 2px outset red;
+    width: 500px;
+    height: 200px;
+}
+.title {
+	border: 2px outset black;
+    background: black;
+    color: red;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+td {
+	border: 2px inset red;
+    background: black;
+    color: red;
+    margin: 10px;
+}
+</style>
 </head>
-<body><center><h3><a href="mailto:mail@lexio.buzz" target="_blank"><i>mail@</a>lexio.buzz</i></h3>
-   <i><a href="https://bummr.social" target="_blank">bummr.social (i run this)</a></i><br>
-    <i><a href="https://knee.lexio.buzz" target="_blank">my discord bot</a></i><br><br>
-    <details><summary><i>socials</i></summary>
-    <i><a href="https://twitter.com/l_e_x_i_o" target="_blank">@l_e_x_i_o (twitter)</a></i><br>
-  <i><a href="https://bsky.app/profile/factfiction.online" target="_blank">factfiction.online (bluesky)</a></i><br>
-  <i><a href="https://femboys.love/@lexio" target="_blank">@lexio@femboys.love (fedi)</a></i><br>
-  <i><a href="https://bummr.social/lexio" target="_blank">@lexio@bummr.social (fedi (my instance))</a></i><br>
-  <i><a href="https://wetdry.world/@lexio" target="_blank">@lexio@wetdry.world (mastodon)</a></i><br>
-  <i><a href="https://ffm.bio/6016" target="_blank">all 6016 socials</a></i><br>
-  </details>
-  <br><br>
-<!-- FC2 Counter  Starts here -->
-<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39402623&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=39402623&main=1" /></noscript>
-<!-- FC2 Counter  Ends here -->
-</center>
-
+<body>
+<div class="humid">
+<h1 class="title">lexio :3</h1>
+<table>
+<tr>
+<td>
+<a href="#" onclick="newDrawing()">
+<img src="https://x0.at/cmQ5.jpg" width="130" height="135" id="art" alt="ID: A black anthropomorphic rat with triangle ears and red outlines. It's ears have an extra triangle on them with 4 lines inside it. The rat has a red collar with the letter L on it's nametag, along with a sweatshirt with the Debian logo on it, which is a red swirl. The rat has glasses, which is usually drawn as a red-border rectangle with a line through the middle, along with it's eyes. They have paws that have 4 fingers, which has 4 circles at the top of each finger, along with a red heart shape at the palm. End ID."></a>
+<td>
+<h2>INFO</h2>
+<p><b>AGE</b>: 14 years old (sona is 19)<br><b>BIRTHDAY</b>: 10/29<br><b>GENDER</b>: Cis male<br><b>PRONOUNS</b>: he/they</p>
+<p>I am a nerd who usually talks about programming, along with infodumping about their favorite comic. I draw from time to time, sharing the drawings they want to share online. I usually listen to EDM music.</p>
+</td>
+</tr>
+</table>
+</div><br>
+<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39402623&amp;main=1"></script>
+<script>
+const images = [
+      "https://x0.at/ng1M.png",
+      "https://x0.at/FOTx.png",
+      "https://x0.at/yblF.png"
+    ];
+function newDrawing() {
+    var img = document.getElementById('art')
+	const rnd = Math.floor(Math.random() * images.length);
+	img.src = images[rnd];
+}
+</script>
 </body>
 </html>
