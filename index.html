@@ -13,13 +13,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://lexio.buzz/style.css">
+	<style>
+.sly {
+  transition: all ease .5s;
+}
+		.sly:active {
+  transform: scale(0.9);
+}
+	</style>
 </head>
 <body>
 <div id="warning" class="center">
 <table>
 <tr>
 <td>
-<img src="https://cdn.lexio.buzz/doom.png" width="150">
+<img src="https://cdn.lexio.buzz/doom.png" class="sly" width="150" onclick="playAudio('https://sparklecarehospital.com/cometcare/icons/squeak.wav')">
 </td>
 <td>
 <h2>DOOM</h2>
