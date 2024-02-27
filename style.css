@@ -33,8 +33,12 @@ td {padding: 5px;}
 .badge {transform: scale(1); transition: 0.5s; image-rendering: pixelated;}
 .badge:hover {transform: scale(1.1); transition: 0.2s;}
 #desktop {
-	background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 35%, rgba(255,255,255,1) 100%); 
-	background-attachment: fixed;
+	background-image: url("https://cdn.lexio.buzz/background.png");
+  min-height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
     width: 100vw;
     height: 100vh;
 }
